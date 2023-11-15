@@ -1,0 +1,42 @@
+ul {
+    place-items: center;
+    list-style-type: none;
+  }
+
+#navblock {
+    background-color: #10570E;
+    width: 500px;
+    height: 550px;
+    place-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.nav {
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .nav a {
+    float: auto;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;
+    
+  }
+  
+  /* Change the color of links on hover */
+  .nav a:hover {
+    background-color: #282615;
+    width: 500px;
+    color: #9ca2a1;
+  }
+  
+  /* Add a color to the active/current link */
+  .nav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  
