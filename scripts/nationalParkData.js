@@ -6985,11 +6985,11 @@ function displayResults(results) {
         resultsBox.innerHTML = "<p>No results found.</p>";
     } else {
         results.forEach(park => {
-            const parkInfo = `<div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${park.LocationName}</h5>
-                    <p class="card-text">Location: ${park.City}, ${park.State}</p>
-                    <p class="card-text">Phone: ${park.Phone}</p>
+            const parkInfo = `<div>
+                <div>
+                    <h5>${park.LocationName}</h5>
+                    <p>Location: ${park.City}, ${park.State}</p>
+                    <p>Phone: ${park.Phone}</p>
                 </div>
             </div>`;
             resultsBox.innerHTML += parkInfo;
