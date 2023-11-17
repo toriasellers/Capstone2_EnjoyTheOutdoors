@@ -1,16 +1,15 @@
 .typewrite {
-    display: block;
-    font-family: 'Lato', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    color: #ffffff;
-    pointer-events: none;
-   text-align: center;
-   padding: 10px;
-  }
-  
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  pointer-events: none;
+  text-align: center;
+  padding: 10px;
+}
+
 .typewrite > .wrap {
-    border-right: none;
-    display: inline-block;
-  }
-  
+  border-right: none;
+  display: inline-block;
+}

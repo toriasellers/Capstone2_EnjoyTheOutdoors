@@ -7,23 +7,60 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/typewriter.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 <body>
-    <header>
         <header>
-            <p id="animation">
-                <a href="" class="typewrite" data-period="2000" data-type='["Discover Americas Story", "Get Involved", "Plan like a ranger!", "Recreate Responsibly" ]'>
-                  <span class="wrap"></span>
-                </a>
-              </p>
+          <div style="font-family: 'Lato', sans-serif;">
+            <nav class="nav">
+            
+                <a class="active" href="parksearch.html">National Parks Search</a>
+                <a href="index.html">Home</a>
+                <a href="mountaininfo.html">Mountain Information</a>
+                <a class="warning" href="mystery.html">Warning</a>
+             
+            </nav>
+          </div>
     </header>
+    
     <div>
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="mountaininfo.html">Mountain Information</a>
-            <a href="mystery.html">WARNING</a>
-        </nav>
+    
+        <div id="cover3">
+            <div id="navblock" class="w3-container">
+                <p style="padding: 100px;"id="animation">
+                    <a href="" class="typewrite" data-period="2000" data-type='["Plan like a ranger", "Get involved", "Recreate responsibly", "Discover Americas Story" ]'>
+                      <span class="wrap"></span>
+                    </a>
+                  </p>
+            </div>
+        </div>
+
+  <div id="parksearch">      
+    Search by Location:
+    <select id="parkLocationDropdown" class="form-select">
+      <option value=""> Select a State </option>
+      <!-- Options will be here -->
+    </select>
+
+    <br>
+    
+    Search by Park Type:
+    <select id="parkTypesDropdown" class="form-select">
+      <option value=""> Select Park Type </option>
+      <!-- options will be here -->
+    </select>
+
+    <br>
+
+    <button id="button"> Search </button>
+
+    <div id="results">
+
     </div>
+</div>
+
     <script src="../scripts/animation.js"></script>
+    <script type="module" src="../scripts/nationalParkData.js"></script>
 </body>
 </html>

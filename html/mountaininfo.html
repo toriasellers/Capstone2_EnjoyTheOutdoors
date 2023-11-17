@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mountain Information</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/typewriter.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body>
-   
-    <div id="navblock" class="w3-container"> 
-            <p id="animation">
-                <a href="" class="typewrite" data-period="2000" data-type='["Soar to new heights...", "Take me to...Grays Peak", "Breathtaking views", "Plan your visit" ]'>
-                  <span class="wrap"></span>
-                </a>
-              </p>
-    
-
-        <nav class="mountainnav">
-        
-            <a href="index.html">Home</a>
-            <a href="parksearch.html">National Parks Search</a>
-         
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/typewriter.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <header>
+      <div style="font-family: 'Lato', sans-serif">
+        <nav class="nav">
+          <a class="active" href="mountaininfo.html">Mountain Information</a>
+          <a href="index.html">Home</a>
+          <a href="parksearch.html">National Parks Search</a>
         </nav>
+      </div>
+    </header>
+
+    <div id="cover2">
+      <div id="navblock" class="w3-container">
+        <p style="padding: 100px" id="animation">
+          <a
+            href=""
+            class="typewrite"
+            data-period="2000"
+            data-type='["Soar to new heights", "Take me to Grays Peak", "Go further", "National treasures" ]'
+          >
+            <span class="wrap"></span>
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div id="mountainSelect">
+      <div>
+        <div>
+          Select a mountain:
+          <select id="selectMountain" class="form-select">
+            <option value="" disabled selected>Choose a mountain</option>
+          </select>
+          <div id="mountainInfo"></div>
+        </div>
+      </div>
     </div>
 
     <script src="../scripts/animation.js"></script>
-</body>
+    <script src="../scripts/mountainData.js"></script>
+  </body>
 </html>

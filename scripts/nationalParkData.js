@@ -1,4 +1,14 @@
-const nationalParksArray = [
+// const locationDropdown = document.getElementById("parkLocationDropdown");
+// const parkTypesDropdown = document.getElementById("parkTypesDropdown");
+
+// const parksBySelections = document.getElementById("ParksBySelections");
+
+
+
+
+// const locationsArray = [...];
+// const parkTypesArray = [...];
+ const nationalParksArray = [
     {
     LocationID: "ABLI",
     LocationName: "Abraham Lincoln Birthplace National Historical Park",
@@ -6858,3 +6868,131 @@ const nationalParksArray = [
     }
     }
 ]
+
+
+const locationsArray = [
+    "Alabama",
+    "Alaska",
+    "American Samoa",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "DC",
+    "Florida",
+    "Georgia",
+    "Guam",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Puerto Rico",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virgin Islands",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
+]
+
+const parkTypesArray = [
+    "National Park",
+    "National Monument",
+    "Recreation Area",
+    "Scenic Trail",
+    "Battlefield",
+    "Historic",
+    "Memorial",
+    "Preserve",
+    "Island",
+    "River",
+    "Seashore",
+    "Trail",
+    "Parkway"
+]
+
+
+const locationDropdown = document.getElementById("parkLocationDropdown");
+const parkTypeDropdown = document.getElementById("parkTypesDropdown");
+const button = document.getElementById("button");
+const resultsBox = document.getElementById("results");
+
+
+locationsArray.forEach(location => {
+    locationDropdown.innerHTML += `<option value="${location}">${location}</option>`;
+});
+
+
+parkTypesArray.forEach(parkType => {
+    parkTypeDropdown.innerHTML += `<option value="${parkType.toLowerCase()}">${parkType}</option>`;
+});
+
+
+button.onclick = searchParks;
+
+function searchParks() {
+    const location = locationDropdown.value;
+    const parkType = parkTypeDropdown.value.toLowerCase();
+
+    const results = nationalParksArray.filter(park => {
+        const matchesLocation = !location || park.State.toLowerCase() === location.toLowerCase();
+        const matchesParkType = park.LocationName.toLowerCase().includes(parkType);
+        return matchesLocation && matchesParkType;
+    });
+
+    
+    displayResults(results);
+}
+
+
+function displayResults(results) {
+    resultsBox.innerHTML = "";
+
+    if (results.length === 0) {
+        resultsBox.innerHTML = "<p>No results found.</p>";
+    } else {
+        results.forEach(park => {
+            const parkInfo = `<div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">${park.LocationName}</h5>
+                    <p class="card-text">Location: ${park.City}, ${park.State}</p>
+                    <p class="card-text">Phone: ${park.Phone}</p>
+                </div>
+            </div>`;
+            resultsBox.innerHTML += parkInfo;
+        });
+    }
+}

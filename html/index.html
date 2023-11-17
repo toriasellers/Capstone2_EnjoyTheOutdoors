@@ -1,34 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/typewriter.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-</head>
-<body>
-    <div id="navblock" class="w3-container">
-        <p id="animation">
-            <a href="" class="typewrite" data-period="2000" data-type='["Exploration is here...", "Upclose with the wild", "Breathtaking views", "National Heritage" ]'>
-              <span class="wrap"></span>
-            </a>
-          </p>
-    
-    
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/typewriter.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div style="font-family: 'Lato', sans-serif">
         <nav class="nav">
-            <ul>
-            <li><a href="mountaininfo.html">Mountain Information</a></li>
-            <br> <br>
-            <li><a href="parksearch.html">National Parks Search</a></li>
-            </ul>
+          <a class="active" href="index.html">Home</a>
+          <a href="mountaininfo.html">Mountain Information</a>
+          <a href="parksearch.html">National Parks Search</a>
         </nav>
+      </div>
+    </header>
+    <div id="cover1">
+      <div id="navblock" class="w3-container">
+        <p style="padding: 100px" id="animation">
+          <a
+            href=""
+            class="typewrite"
+            data-period="2000"
+            data-type='["Exploration is here...", "Upclose with the wild", "Breathtaking views", "National Heritage" ]'
+          >
+            <span class="wrap"></span>
+          </a>
+        </p>
+      </div>
     </div>
 
+    <div style="font-family: 'Roboto', sans-serif">
+      <div id="nativeHeritage">
+        Sharing history and culture: <br />
+        <span style="font-size: large">Explore Native American Heritage</span>
+        <br />
+        <button style="font-size: small" id="learnMoreButton">
+          Learn more
+        </button>
+      </div>
+
+      <div id="npsApp">
+        The National Parks Service App: <br />
+        <span style="font-size: large">Download Today</span> <br />
+        <button style="font-size: small" id="npsAppButton">Learn More</button>
+      </div>
+
+      <div id="foundation">
+        Get Email Updates: <br />
+        <span style="font-size: large">National Park Foundation</span> <br />
+        <button style="font-size: small" id="foundationButton">
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("learnMoreButton").onclick = function () {
+        window.location.href =
+          "https://www.nps.gov/subjects/npscelebrates/native-american-heritage-month.htm";
+      };
+
+      document.getElementById("npsAppButton").onclick = function () {
+        window.location.href =
+          "https://www.nps.gov/subjects/digital/nps-apps.htm";
+      };
+
+      document.getElementById("foundationButton").onclick = function () {
+        window.location.href =
+          "https://www.nationalparks.org/goparks-newsletter?utm_source=nps&utm_medium=homepage&utm_campaign=homepagebutton";
+      };
+    </script>
+
     <script src="../scripts/animation.js"></script>
-</body>
+  </body>
 </html>
